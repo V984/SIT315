@@ -1,0 +1,29 @@
+// C++ code
+//
+int pir =2;
+int led = 12;
+
+void setup()
+{
+  pinMode(pir, INPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(5000);
+}
+
+void loop()
+{
+  if( digitalRead(pir)== HIGH)
+  {
+    digitalWrite(led,HIGH);
+    Serial.println("Motion is Detected");
+    delay(500);
+  }
+  else
+    {
+      digitalWrite(led, LOW);
+      Serial.println("No motion detected");
+      
+    }
+    delay(1000);
+      
+  }
